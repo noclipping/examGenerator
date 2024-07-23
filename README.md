@@ -1,19 +1,6 @@
 # Markdown Exam Generator
 
-This project combines multiple Markdown files into a single file and generates multiple-choice exam questions based on the combined content using the OpenAI API.
-
-## Table of Contents
-
-- [Markdown Exam Generator](#markdown-exam-generator)
-  - [Table of Contents](#table-of-contents)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Configuration](#configuration)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Acknowledgements](#acknowledgements)
-  - [Contact](#contact)
+This project script combines multiple Markdown files into a single file and generates multiple-choice exam questions based on the combined content using the OpenAI API.
 
 ## Prerequisites
 
@@ -25,11 +12,14 @@ This project combines multiple Markdown files into a single file and generates m
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/markdown-exam-generator.git
-   cd markdown-exam-generator
+   git clone https://github.com/your-username/your-curriculum-repo.git
+   cd your-curriculum-repo
    ```
 
-2. **Create and activate a virtual environment**:
+2. **Add the `generate_exam.py` script**:
+   Place the `generate_exam.py` script in the top-level directory of your cloned repository.
+
+3. **Create and activate a virtual environment**:
 
    - On Windows:
      ```bash
@@ -42,14 +32,14 @@ This project combines multiple Markdown files into a single file and generates m
      source venv/bin/activate
      ```
 
-3. **Install the required dependencies**:
+4. **Install the required dependencies**:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Create a `.env` file**:
-   - In the root directory of your project, create a file named `.env` and add your OpenAI API key:
+5. **Create a `.env` file**:
+   - In the top-level directory of your project, create a file named `.env` and add your OpenAI API key:
      ```
      OPENAI_API_KEY=your_openai_api_key
      ```
@@ -95,3 +85,24 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 Created by [noclipping](https://github.com/noclipping) - feel free to contact me!
+
+### Example Directory Structure
+
+```
+
+
+your-curriculum-repo/
+│
+├── .env
+├── .gitignore
+├── requirements.txt
+├── generate_exam.py
+├── lecture1/
+│ ├── part1.md
+│ └── part2.md
+├── lecture2/
+│ ├── part1.md
+│ └── part2.md
+└── combined.md (will be generated)
+
+```
